@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Character_Controller : MonoBehaviour
 {
+    //Velocità del mio player
     [SerializeField] float speed;
+
+    //Limiti entro i quali non potrà muoversi
     [SerializeField] float limits;
 
     Rigidbody rb;
@@ -12,6 +15,7 @@ public class Character_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Ottengo il rigidbody del mio player
         rb = GetComponent<Rigidbody>();
     }
 
@@ -27,6 +31,8 @@ public class Character_Controller : MonoBehaviour
         //InputManager = Input orizzontale e verticale
         float xMovement = Input.GetAxis("Horizontal");
         float yMovement = Input.GetAxis("Vertical");
+
+        //Creo un nuovo Vector3 con gli input orizzontali e verticali
         Vector3 movement = new Vector3(xMovement, yMovement, 0);
 
         //Modifico la posizione del rb
@@ -35,6 +41,7 @@ public class Character_Controller : MonoBehaviour
 
     void Limits()
     {
+        //Se supera i limiti, la posizione rimane uguale al limite
         if(transform.position.y >= limits)
         {
             transform.position = new Vector2(gameObject.transform.position.x, limits);
