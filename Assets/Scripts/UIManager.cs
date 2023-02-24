@@ -10,11 +10,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] public GameObject panelNextLevel;
     [SerializeField] public TextMeshProUGUI timerUI;
 
+    //Per caricare la scena successiva
     private int prevSceneToLoad;
 
     private void Start()
     {
         timerUI.text = 0.ToString();
+        //Per caricare la scena successiva
         prevSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
     }
@@ -27,6 +29,12 @@ public class UIManager : MonoBehaviour
     public void UpdateTimer(float time)
     {
         timerUI.text = Mathf.FloorToInt(time).ToString();
+    }
+
+    //Carica il menu
+    public void MenuScene()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     //Inizia il gioco
