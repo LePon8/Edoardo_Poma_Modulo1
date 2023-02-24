@@ -22,7 +22,7 @@ public class Shoot_Controller : MonoBehaviour
     void Shoot()
     {
         //Se premobarra spaziatrice
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //Instanzio prefab nella poszione assegnata
             GameObject objectToInstantiate = Instantiate(bulletPrefabs, new Vector3(shootPoint.transform.position.x, shootPoint.transform.position.y, shootPoint.transform.position.z), Quaternion.identity);
