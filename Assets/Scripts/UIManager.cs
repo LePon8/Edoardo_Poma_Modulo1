@@ -72,4 +72,9 @@ public class UIManager : MonoBehaviour
         timerUI.text = 0.ToString();
         Time.timeScale = 1;
     }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 }

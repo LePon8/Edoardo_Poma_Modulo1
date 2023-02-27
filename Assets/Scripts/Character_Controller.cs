@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character_Controller : MonoBehaviour
 {
@@ -10,13 +11,29 @@ public class Character_Controller : MonoBehaviour
     //Limiti entro i quali non potrà muoversi
     [SerializeField] float limits;
 
+    [Header("VitaPlayer")]
+    [SerializeField] int maxHP;
+    [SerializeField] Slider HPBar;
+    int currentHP;
+    [SerializeField] int damage;
+
     Rigidbody rb;
+    UIManager UIM;
+
+    private void Awake()
+    {
+        currentHP = maxHP;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         //Ottengo il rigidbody del mio player
         rb = GetComponent<Rigidbody>();
+
+        UIM = FindObjectOfType<UIManager>();
+
+        HPBar.maxValue = currentHP;
     }
 
     // Update is called once per frame
@@ -52,12 +69,26 @@ public class Character_Controller : MonoBehaviour
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Limit"))
         {
-            Debug.Log("Yeppa");
-            //Time.timeScale = 0;
+            UIM.GameOver();
+        }
+
+        if (other.gameObject.CompareTag("BulletEnemy"))
+        {
+            currentHP -= damage;
+            HPBar.value = currentHP;
+            
+            other.gameObject.SetActive(false);
+
+            if (currentHP <= 0)
+            {
+                UIM.GameOver();
+            }
+
         }
     }
 }
