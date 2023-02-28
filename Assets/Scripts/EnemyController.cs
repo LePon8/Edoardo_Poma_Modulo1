@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyController : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField] float enemySpeed;
 
     [SerializeField] int Hp;
+    [SerializeField] Slider HPBar;
+    public int currentHP;
+
 
     [Header("Enemies Shooter")]
     //Velocità proiettile 
@@ -25,12 +29,19 @@ public class EnemyController : MonoBehaviour
 
     Character_Controller CH;
 
+    private void Awake()
+    {
+        currentHP = Hp;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         rbEnemy = GetComponent<Rigidbody>();
 
         CH = FindObjectOfType<Character_Controller>();
+
+        HPBar.maxValue = currentHP;
     }
 
     // Update is called once per frame
@@ -63,10 +74,11 @@ public class EnemyController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PlayerBullet"))
         {
-            Hp = Hp - 1;
+            currentHP -= 1;
+            HPBar.value = currentHP;
             other.gameObject.SetActive(false);
 
-            if(Hp == 0)
+            if(currentHP <= 0)
             {
                 gameObject.SetActive(false);
             }

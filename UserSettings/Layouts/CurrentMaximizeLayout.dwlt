@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 12358
+  controlID: 12816
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 605b0000
-      m_LastClickedID: 23392
-      m_ExpandedIDs: 36fbfffff65a0000
+      m_SelectedIDs: d0ecfeff
+      m_LastClickedID: -70448
+      m_ExpandedIDs: 9e0cffffd00cffff2c0dffff3e0dffff6c1affffc21affff221cffff2e1cffff361cffff3e1cffff36fbfffff65a0000de910000149200005c920000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -501,9 +501,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 13.316816, y: 2.133357, z: -0.8139076}
+    m_Target: {x: 3.72, y: -0.86, z: 0}
     speed: 2
-    m_Value: {x: 13.316816, y: 2.133357, z: -0.8139076}
+    m_Value: {x: 3.72, y: -0.86, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -550,13 +550,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.07666656, y: -0.04276415, z: 0.0032867957, w: -0.99615693}
+    m_Target: {x: -0.057140876, y: -0.06973309, z: 0.003999185, w: -0.9959471}
     speed: 2
-    m_Value: {x: -0.07666479, y: -0.042763166, z: 0.00328672, w: -0.996134}
+    m_Value: {x: -0.05564538, y: -0.06973712, z: 0.0038944636, w: -0.99600464}
   m_Size:
-    m_Target: 16.958813
+    m_Target: 1.0443029
     speed: 2
-    m_Value: 16.958813
+    m_Value: 0.9993329
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -674,21 +674,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 78
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 78
   m_LastProjectPath: D:\Progetti_Personali_EH\Edoardo_Poma_Modulo1
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6e5c0000
-    m_LastClickedID: 23662
+    m_SelectedIDs: 685c0000
+    m_LastClickedID: 23656
     m_ExpandedIDs: 00000000665c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -742,9 +742,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 605b0000
-    m_LastClickedInstanceID: 23392
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: d0ecfeff
+    m_LastClickedInstanceID: -70448
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -795,7 +795,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -1920
     y: 628
-    width: 976
+    width: 1016
     height: 363
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
