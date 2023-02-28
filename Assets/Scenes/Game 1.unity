@@ -389,7 +389,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1818879482}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: NextLevel1
+        m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1492,8 +1492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b402e4e1638d6864b8c1007f5308a1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyToSpawn: {fileID: 9086621643944962617, guid: 57fcaa74387809b40a89c349c5f27596, type: 3}
-  timeSpawn: 2
+  enemyToSpawn: {fileID: 9086621643944962617, guid: d2b648c2a5e75244cb6f75b83ca3fedc, type: 3}
+  timeSpawn: 3
   upLimitSpawn: {fileID: 703736404}
   downLimitSpawn: {fileID: 520527039}
   spawnerSpeed: 1

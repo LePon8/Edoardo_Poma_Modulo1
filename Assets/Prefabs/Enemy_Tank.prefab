@@ -84,9 +84,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 4
+  m_MaxValue: 8
   m_WholeNumbers: 0
-  m_Value: 4
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -435,7 +435,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0269b879099374c4a9fba41b6c526a7f, type: 2}
+  - {fileID: 2100000, guid: fce4f4104feaa274bb8eff713b167f6e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 6418380354995329495}
   - component: {fileID: 6540827320160202075}
   m_Layer: 0
-  m_Name: Enemy_Low
+  m_Name: Enemy_Tank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -535,12 +535,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f173e91c253cfab4e8da3bd658bd6422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 1
-  Hp: 2
+  enemySpeed: 0.5
+  Hp: 8
   HPBar: {fileID: 2776707281838083855}
   currentHP: 0
   bulletSpeed: 100
   shootTime: 0
-  shootVelocity: 3
+  shootVelocity: 2
   shootPoint: {fileID: 4142087943621143072}
   bulletPrefab: {fileID: 129287436420156793, guid: 82e7aa793a907744ba48d967b8360739, type: 3}

@@ -11,13 +11,14 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI timerUI;
 
     //Per caricare la scena successiva
-    private int prevSceneToLoad;
+    //private int prevSceneToLoad;
 
     private void Start()
     {
+        Time.timeScale = 1;
         timerUI.text = 0.ToString();
         //Per caricare la scena successiva
-        prevSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        //prevSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
     }
 
@@ -68,9 +69,9 @@ public class UIManager : MonoBehaviour
         GameObject.Find("Player").GetComponent<Shoot_Controller>().enabled = true;
     }
 
-    public void NextLevel()
+    public void NextLevel1()
     {
-        SceneManager.LoadScene(prevSceneToLoad);
+        SceneManager.LoadScene("Game 1");
         timerUI.text = 0.ToString();
         Time.timeScale = 1;
     }
