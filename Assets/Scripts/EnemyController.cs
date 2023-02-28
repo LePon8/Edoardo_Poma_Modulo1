@@ -8,6 +8,8 @@ public class EnemyController : MonoBehaviour
     //velocità enemy
     [SerializeField] float enemySpeed;
 
+    [SerializeField] int Hp;
+
     [Header("Enemies Shooter")]
     //Velocità proiettile 
     [SerializeField] float bulletSpeed;
@@ -21,10 +23,14 @@ public class EnemyController : MonoBehaviour
 
     Rigidbody rbEnemy;
 
+    Character_Controller CH;
+
     // Start is called before the first frame update
     void Start()
     {
         rbEnemy = GetComponent<Rigidbody>();
+
+        CH = FindObjectOfType<Character_Controller>();
     }
 
     // Update is called once per frame
@@ -51,5 +57,24 @@ public class EnemyController : MonoBehaviour
             shootTime = 0;
         }
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PlayerBullet"))
+        {
+            Hp = Hp - 1;
+            other.gameObject.SetActive(false);
+
+            if(Hp == 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
+        if (other.CompareTag("Limit"))
+        {
+            CH.Damage();
+        }
     }
 }

@@ -13,9 +13,9 @@ public class Character_Controller : MonoBehaviour
 
     [Header("VitaPlayer")]
     [SerializeField] int maxHP;
-    [SerializeField] Slider HPBar;
-    int currentHP;
-    [SerializeField] int damage;
+    [SerializeField] public Slider HPBar;
+    public int currentHP;
+    [SerializeField] public int damage;
 
     Rigidbody rb;
     UIManager UIM;
@@ -69,6 +69,16 @@ public class Character_Controller : MonoBehaviour
         }
     }
 
+    public void Damage()
+    {
+        currentHP -= damage;
+        HPBar.value = currentHP;
+
+        if (currentHP <= 0)
+        {
+            UIM.GameOver();
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -77,18 +87,14 @@ public class Character_Controller : MonoBehaviour
             UIM.GameOver();
         }
 
-        if (other.gameObject.CompareTag("BulletEnemy"))
+        if (other.gameObject.CompareTag("BulletEnemy") || other.gameObject.CompareTag("Enemy"))
         {
-            currentHP -= damage;
-            HPBar.value = currentHP;
+            Damage();
             
             other.gameObject.SetActive(false);
 
-            if (currentHP <= 0)
-            {
-                UIM.GameOver();
-            }
-
         }
     }
+
+
 }

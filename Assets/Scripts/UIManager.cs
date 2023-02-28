@@ -56,6 +56,7 @@ public class UIManager : MonoBehaviour
         {
             panelPause.SetActive(true);
             Time.timeScale = 0;
+            GameObject.Find("Player").GetComponent<Shoot_Controller>().enabled = false;
         }
     }
 
@@ -64,6 +65,7 @@ public class UIManager : MonoBehaviour
     {
         panelPause.SetActive(false);
         Time.timeScale = 1;
+        GameObject.Find("Player").GetComponent<Shoot_Controller>().enabled = true;
     }
 
     public void NextLevel()

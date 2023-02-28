@@ -23,6 +23,7 @@ public class SpawnerController : MonoBehaviour
     //Tempo effettivo
     float spawnTimer;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class SpawnerController : MonoBehaviour
         downLimit = downLimitSpawn.position.y;
 
         rbSpawner = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame
@@ -38,6 +40,8 @@ public class SpawnerController : MonoBehaviour
     {
         Spawner();
     }
+
+    
 
     void Spawner()
     {

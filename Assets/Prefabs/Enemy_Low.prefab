@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: -28584678826608374}
   - component: {fileID: 8956946373941611910}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Enemy_Low
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6382430470132845284}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpeed: 1
+  Hp: 2
   bulletSpeed: 100
   shootTime: 0
   shootVelocity: 3

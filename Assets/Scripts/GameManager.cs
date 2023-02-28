@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     //Limite di tempo
-    [SerializeField] float timeLimit = 0;
+    [SerializeField] public float timeLimit = 0;
     //Tempo trascorso
-    [SerializeField] float elapsedTime;
+    [SerializeField] public float elapsedTime;
     //Richiamo UIManager
     UIManager UIM;
 
@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             UIM.panelNextLevel.SetActive(true);
             UIM.timerUI.text = "0";
+            GameObject.Find("Player").GetComponent<Shoot_Controller>().enabled = false;
         }
     }
 }
