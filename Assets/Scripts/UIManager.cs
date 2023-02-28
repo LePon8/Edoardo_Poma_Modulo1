@@ -17,8 +17,6 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         timerUI.text = 0.ToString();
-        //Per caricare la scena successiva
-        //prevSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
     }
 
@@ -73,7 +71,14 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Game 1");
         timerUI.text = 0.ToString();
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
+    }
+
+    public void NextLevel2()
+    {
+        SceneManager.LoadScene("Game 2");
+        timerUI.text = 0.ToString();
+        //Time.timeScale = 1;
     }
 
     public void GameOver()

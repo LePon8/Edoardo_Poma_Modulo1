@@ -33,6 +33,8 @@ public class SpawnerController : MonoBehaviour
 
         rbSpawner = GetComponent<Rigidbody>();
 
+        spawnTimer = timeSpawn;
+
     }
 
     // Update is called once per frame
